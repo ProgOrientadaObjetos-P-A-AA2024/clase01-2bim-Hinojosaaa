@@ -44,7 +44,14 @@ public class EstudiantePresencial extends Estudiante{
     
     @Override
     public String toString(){
-        return nombresEstudiante;
+        /*Podemos usar atrivutos tanto heredados como propios de la clase en la
+        que estemos trabajando cuando hagamos uso del toString*/
+        String cadena = String.format(
+                "Nombre: %s\n"
+                        + "Costo Matricula: %.2f\n",
+                nombresEstudiante,
+                matriculaPresencial);
+        return cadena;
     }
     
 }
